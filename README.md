@@ -7,5 +7,5 @@
 
 ## Fonctionnalités implémentées
 
-+ Copie de l'exemple [todomvc.com](http://todomvc.com/examples/vanillajs/#/ "http://todomvc.com/examples/vanillajs/#/") avec les mêmes fonctionnalités
-+ Effacer tout
++ Copie de l'exemple [todomvc.com](http://todomvc.com/examples/vanillajs/#/ "http://todomvc.com/examples/vanillajs/#/") la plus similaire possible.
++ Effacer tout.
