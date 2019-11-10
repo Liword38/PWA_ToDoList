@@ -71,6 +71,13 @@ export class TodoListComponent implements OnInit {
     });
   }
 
+  //Retire tous les items de la liste
+  clearAll() {
+    this.data.items.forEach(item => {
+      this.todoService.removeItems(item);
+    })
+  }
+
   //Renvoie le nombre d'items non valides
   getCountLeft(): number {
     var CountLeft: number = 0;
