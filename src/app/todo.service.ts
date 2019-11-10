@@ -7,13 +7,15 @@ import {TodoItemData} from './dataTypes/TodoItemData';
 export class TodoService {
 
   private todoListSubject = new BehaviorSubject<TodoListData>( {label: 'TodoList', items: []} );
-
+  
   constructor() { }
 
+  //Renvoie un Observable de TodoListData a partir duquel un Component peut s'abonner
   getTodoListDataObserver(): Observable<TodoListData> {
     return this.todoListSubject.asObservable();
   }
 
+  //Modifie de label des items passes en argument
   setItemsLabel(label: string, ...items: TodoItemData[] ) {
     const tdl = this.todoListSubject.getValue();
     this.todoListSubject.next( {
@@ -22,6 +24,7 @@ export class TodoService {
     });
   }
 
+  //Valide ou invalide les items passes en argument
   setItemsDone(isDone: boolean, ...items: TodoItemData[] ) {
     const tdl = this.todoListSubject.getValue();
     this.todoListSubject.next( {
@@ -30,6 +33,7 @@ export class TodoService {
     });
   }
 
+  //Ajoute les items passes en argument a la liste
   appendItems( ...items: TodoItemData[] ) {
     const tdl = this.todoListSubject.getValue();
     this.todoListSubject.next( {
@@ -38,6 +42,7 @@ export class TodoService {
     });
   }
 
+    //Retire les items passes en argument a la liste
   removeItems( ...items: TodoItemData[] ) {
     const tdl = this.todoListSubject.getValue();
     this.todoListSubject.next( {
