@@ -6,15 +6,25 @@
               name        = "newTodoInput"
               class       = "new-todo"
               placeholder = "Que faire?"
-              autofocus />
+              autofocus 
+               />
+      
     </form>
   </header>
   <section class="main">
-    <input (click)="toggleUntoggleAll()"  class="toggle-all"
-            type="checkbox"
-            name="toggleAll"
-            
+    <input (click)="toggleUntoggleAll()" 
+           class="toggle-all"
+           type="checkbox"
+           name="toggleAll"         
     />
+
+    <button *ngIf="items.length > 0"
+            (click)="clearAll()" 
+            class="clear-all"
+            name="clearAll"
+            title= "Effacer toutes les tâches"         
+    ></button>
+
     <ul class="todo-list">
       <ng-container *ngFor="let item of items" >
         <li *ngIf="mode=='All' || (mode=='Completed' && item.isDone) || (mode=='Active' && !item.isDone)" [ngClass]="{completed: item.isDone, editing: item.editing}">
@@ -42,6 +52,3 @@
 </section>
 <hr/>
 
-
-<!--TEST V0-->
-<button (click)="clearAll()">DELETE ALL</button>
