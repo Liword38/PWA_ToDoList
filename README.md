@@ -5,8 +5,8 @@
 + `git clone https://github.com/Liword38/PWA_ToDoList.git`
 + `npm install` to install dependencies
 + ng add @angular/pwa 	(??)
-+ npm i lite-server -g               (??)
-+ `ng build --prod && lite-server --baseDir=”dist”`   -->http://localhost:3000  par défaut
++ `(sudo) npm i lite-server -g`
++ `ng build --prod && lite-server --baseDir=dist`   -->http://localhost:3000  par défaut
 
 ## Fonctionnalités implémentées
 
