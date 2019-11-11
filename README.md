@@ -1,12 +1,15 @@
 # MIASHS-M2-TP3-Projet
 
 ## Development server
-+ Run `npm install` to install dependencies
-+ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
++ `git clone https://github.com/Liword38/PWA_ToDoList.git`
++ `npm install` to install dependencies
++ ng add @angular/pwa 	(??)
++ npm i lite-server -g               (??)
++ `ng build --prod && lite-server --baseDir=”dist”`   -->http://localhost:3000  par défaut
 
 ## Fonctionnalités implémentées
 
 + Copie de l'exemple [todomvc.com](http://todomvc.com/examples/vanillajs/#/ "http://todomvc.com/examples/vanillajs/#/") la plus similaire possible.
 + Effacer tout.
-+ PWA :Le seul critère PWA rejeté par le système d'audit Lighthouse de Google est la redirection du trafic HTTP vers HTTPS
++ PWA :Le seul critère PWA rejeté par le système d'audit Lighthouse de Google est la redirection du trafic HTTP vers HTTPS, qui serait à configurer sur le serveur de production.
