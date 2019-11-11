@@ -9,3 +9,4 @@
 
 + Copie de l'exemple [todomvc.com](http://todomvc.com/examples/vanillajs/#/ "http://todomvc.com/examples/vanillajs/#/") la plus similaire possible.
 + Effacer tout.
++ PWA :Le seul critère PWA rejeté par le système d'audit Lighthouse de Google est la redirection du trafic HTTP vers HTTPS
