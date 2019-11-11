@@ -16,9 +16,9 @@ export class TodoListComponent implements OnInit {
 
   @Input()
 
-  private data: TodoListData;
-  private titre: string;
-  private mode: string;  //Peut prendre les valeurs {'All','Completed','Active'} en fonction du mode d'affichage
+  data: TodoListData;
+  titre: string;
+  mode: string;  //Peut prendre les valeurs {'All','Completed','Active'} en fonction du mode d'affichage
 
 
 
@@ -44,7 +44,8 @@ export class TodoListComponent implements OnInit {
     this.todoService.appendItems(
       {
         label,
-        isDone: false
+        isDone: false,
+        editing: false
       });
   }
 
