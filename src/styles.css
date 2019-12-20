@@ -40,6 +40,7 @@ body {
 button,
 input[type="checkbox"] {
     outline: none;
+    float:right;
 }
 
 .hidden {
@@ -123,8 +124,8 @@ label[for='toggle-all'] {
 }
 
 .clear-all:hover {
-    top: -62px;
-    left: 478px;
+    top: -60px;
+    left: -5px;
     width: 65px;
     height: 65px;
 }
@@ -135,9 +136,9 @@ label[for='toggle-all'] {
     background: url('assets/clearLogo.png');
     background-size: 100%;
     display: inline-block;
-    position: absolute;
+    position:relative;
     top: -60px;
-    left: 480px;
+    left: -5px;
     width: 60px;
     height: 60px;
     text-align: center;
