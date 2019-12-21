@@ -2,9 +2,8 @@
     <header class="header">
         <h1>{{titre}}</h1>
         <form (submit)="appendItem(newTodoInput.value); newTodoInput.value=''">
-            <label>
+            
             <input #newTodoInput name="newTodoInput" class="new-todo" placeholder="Que faire?" autofocus >
-          </label>
         </form>
 
     </header>
@@ -15,7 +14,7 @@
 
         <ul class="todo-list">
             <ng-container *ngFor="let item of items">
-                <li *ngIf="mode=='All' || (mode=='Completed' && item.isDone) || (mode=='Active' && !item.isDone)" [ngClass]="{completed: item.isDone, editing: item.editing}">
+                <li *ngIf="mode=='All' || (mode=='Completed' && item.isDone) || (mode=='Active' && !item.isDone) && !item.editing" [ngClass]="{completed: item.isDone, editing: item.editing}">
                     <app-todo-item [data]="item"></app-todo-item>
                 </li>
             </ng-container>

@@ -20,7 +20,7 @@ export class TodoService {
     const tdl = this.todoListSubject.getValue();
     this.todoListSubject.next( {
       label: tdl.label,
-      items: tdl.items.map( I => items.indexOf(I) === -1 ? I : ({label, isDone: I.isDone, editing: I.editing}) )
+      items: tdl.items.map( I => items.indexOf(I) === -1 ? I : ({label, isDone: I.isDone, editing: false}) )
     });
   }
 
@@ -29,11 +29,20 @@ export class TodoService {
     const tdl = this.todoListSubject.getValue();
     this.todoListSubject.next( {
       label: tdl.label,
-      items: tdl.items.map( I => items.indexOf(I) === -1 ? I : ({label: I.label, isDone, editing: I.editing}) )
+      items: tdl.items.map( I => items.indexOf(I) === -1 ? I : ({label: I.label, isDone, editing: false}) )
     });
   }
 
-  //Ajoute les items passes en argument a la liste
+  //Passe en mode editing ou non editing les items passes en argument
+  setItemEditing(isEditing: boolean, ...items: TodoItemData[] ) {
+    const tdl = this.todoListSubject.getValue();
+    this.todoListSubject.next( {
+      label: tdl.label,
+      items: tdl.items.map( I => items.indexOf(I) === -1 ? I : ({label: I.label, isDone: I.isDone, editing: isEditing}) )
+    });
+  }
+
+  //Ajoute les items passes en argument a la liste des items
   appendItems( ...items: TodoItemData[] ) {
     const tdl = this.todoListSubject.getValue();
     this.todoListSubject.next( {
@@ -42,7 +51,7 @@ export class TodoService {
     });
   }
 
-    //Retire les items passes en argument a la liste
+    //Retire les items passes en argument de la liste
   removeItems( ...items: TodoItemData[] ) {
     const tdl = this.todoListSubject.getValue();
     this.todoListSubject.next( {
@@ -50,5 +59,7 @@ export class TodoService {
       items: tdl.items.filter( I => items.indexOf(I) === -1 )
     });
   }
+
+
 
 }
