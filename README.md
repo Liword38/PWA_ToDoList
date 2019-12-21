@@ -26,3 +26,7 @@
 + Responsive App : l'application est fonctionnelle et s'affiche relativement correctement sur tous types d'écran.
     + (Je n'ai cependant pas eu à utiliser de fonctionnalités comme le flex-layout, les média queries ou breakpoints, le CSS était suffisant)
     
+    
+## Problèmes rencontrés
+
++ Rien de notable si ce n'est un manque de temps pour pousser l'app plus loins.
