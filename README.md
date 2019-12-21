@@ -2,10 +2,17 @@
 
 ## Development server
 
+### Environnement
++ Installer Nodejs (https://nodejs.org/en/)
++ `npm install -g typescript`
++ `npm install -g @angular/cli`
++ `npm i lite-server -g`
+
+### Projet
 + `git clone https://github.com/Liword38/PWA_ToDoList.git`
-+ `npm install` to install dependencies
-+ `(sudo) npm i lite-server -g`
-+ `ng build --prod && lite-server --baseDir=dist`   -->http://localhost:3000  par défaut
++ `npm install` dans le dossier "PWA_ToDoList" to install dependencies
++ `ng build --prod` 
++ `lite-server --baseDir=dist`   -->http://localhost:3000  par défaut
 
 ## Fonctionnalités implémentées
 
